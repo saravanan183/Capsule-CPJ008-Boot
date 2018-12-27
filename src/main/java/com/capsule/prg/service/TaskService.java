@@ -20,7 +20,9 @@ public interface TaskService {
 
 	public Tasks addTasks(Tasks tasks);
 	
-	public Tasks updateTasks(Tasks tasks, Integer taskId);
+	//public Tasks updateTasks(Tasks tasks, Integer taskId);
+	
+	public Tasks updateTasks(Tasks tasks);
 	
 	public void deleteTasks(Integer tasks);
 	
