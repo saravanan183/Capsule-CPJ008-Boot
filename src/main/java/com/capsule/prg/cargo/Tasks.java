@@ -51,8 +51,8 @@ public class Tasks {
 	}
 
 
-	@Column(name= "PARENT_ID")
-	private int parentId;
+	@Column(name= "PARENT_TASK")
+	private String parentTask;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name="START_DATE")
@@ -82,19 +82,6 @@ public class Tasks {
 		this.taskId = taskId;
 	}
 
-	/**
-	 * @return the parentId
-	 */
-	public int getParentId() {
-		return parentId;
-	}
-
-	/**
-	 * @param parentId the parentId to set
-	 */
-	public void setParentId(int parentId) {
-		this.parentId = parentId;
-	}
 
 
 	/**
@@ -129,6 +116,34 @@ public class Tasks {
 	@Override
 	public String toString() {
 		return ToStringBuilder.reflectionToString(this);
+	}
+
+	/**
+	 * @return the priority
+	 */
+	public byte getPriority() {
+		return priority;
+	}
+
+	/**
+	 * @param priority the priority to set
+	 */
+	public void setPriority(byte priority) {
+		this.priority = priority;
+	}
+
+	/**
+	 * @return the parentTask
+	 */
+	public String getParentTask() {
+		return parentTask;
+	}
+
+	/**
+	 * @param parentTask the parentTask to set
+	 */
+	public void setParentTask(String parentTask) {
+		this.parentTask = parentTask;
 	}
 }
 
