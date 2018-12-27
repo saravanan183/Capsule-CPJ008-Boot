@@ -52,7 +52,7 @@ public class TaskServiceImpl implements TaskService{
 		return returnTasks;
 	}
 	
-	@Override
+	/*@Override
 	public Tasks updateTasks(Tasks tasks, Integer taskId) {
 		Optional<Tasks> task= taskDao.findTasks(taskId);
 		Tasks updateTasks = null;
@@ -65,8 +65,13 @@ public class TaskServiceImpl implements TaskService{
 			 throw new TasksNotFoundException("UpdateTasks failed due to ID not found:"+taskId);
 		 }
 		return updateTasks;
+	}*/
+	@Override
+	public Tasks updateTasks(Tasks tasks) {
+		
+		return taskDao.updateTasks(tasks);
+		
 	}
-
 	@Override
 	public void deleteTasks(Integer tasksId) {
 		Optional<Tasks> task= taskDao.findTasks(tasksId);
